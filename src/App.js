@@ -4,7 +4,7 @@ import Home from "./Home";
 import Popular from "./Popular";
 import Battle from  "./Battle";
 import Layout from "./Layout";
-
+import Results from "./Results";
 
 
  const router = createBrowserRouter([
@@ -13,7 +13,6 @@ import Layout from "./Layout";
     element: <Layout/>,
     children:
      [
-
     {
       path: "/",
      element: <Home/>,
@@ -27,11 +26,14 @@ import Layout from "./Layout";
       element: <Battle/>,
     },
     {
+      path:"/battle/results",
+      element: <Results/>
+    },
+    {
       path: "*",
       element: <h3>Errooor</h3>
     }
-
-  ]
+ ]
 }])
 const App=() => 
 <RouterProvider router={router}/>
