@@ -15,12 +15,10 @@ const Results = ()=>{
 
     useEffect(()=>{
     const searchParams = new URLSearchParams(window.location.search);
-       console.log(searchParams,window.location.search)
-       console.log(searchParams.get(`playerOneName`))
-  madeBattle([searchParams.get(`playerOneName`),searchParams.get(`playerTwoName`)])
+      
+    madeBattle([searchParams.get(`playerOneName`),searchParams.get(`playerTwoName`)])
      .then(([winner,loser])=>{
         setWinner(winner);
-        console.log(setWinner);
         setLoser(loser);
       })
     .catch(error => setError(error))
